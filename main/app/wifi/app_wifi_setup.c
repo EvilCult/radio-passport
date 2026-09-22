@@ -3,7 +3,6 @@
 #include "app_wifi_web.h"
 #include "esp_event.h"
 #include "esp_netif.h"
-#include "esp_random.h"
 #include "esp_wifi.h"
 #include "nvs_flash.h"
 #include <stdio.h>
@@ -103,8 +102,7 @@ static void app_wifi_setup_start_ap(void)
     snprintf(
         ssid,
         sizeof(ssid),
-        "radio-%05lu",
-        (unsigned long)(esp_random() % 100000)
+        "Pocket-Radio"
     );
 
     wifi_config_t ap_config = {

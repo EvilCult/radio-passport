@@ -11,6 +11,8 @@ idf_component_register(
         "app/wifi/app_setting_wifi.c"
         "app/wifi/app_wifi_setup.c"
         "app/wifi/app_wifi_web.c"
+        "app/music/app_music.c"
+        "app/music/app_music_player.c"
     INCLUDE_DIRS
         "."
         "app/init"
@@ -19,6 +21,7 @@ idf_component_register(
         "app/setting"
         "app/status_bar"
         "app/test"
+        "app/music"
         "app/wifi"
     REQUIRES
         esp_wifi
@@ -29,5 +32,7 @@ idf_component_register(
         bsp
         nvs_flash
         esp_http_server
+        esp_http_client
         json
+        esp_audio_codec
 )

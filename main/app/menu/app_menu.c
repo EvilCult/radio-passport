@@ -7,7 +7,7 @@
 #include "app_menu.h"
 #include "app_page.h"
 #include "app_setting.h"
-#include "app_test.h"
+#include "app_music.h"
 
 #define APP_MENU_BG_COLOR 0x154868
 
@@ -29,7 +29,7 @@ typedef struct {
 static const app_menu_item_t menu_items[] = {
     {
         .title = "Music",
-        .action = app_test_init,
+        .action = app_music_init,
     },
     {
         .title = "Settings",
