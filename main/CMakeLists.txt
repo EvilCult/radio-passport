@@ -1,0 +1,33 @@
+idf_component_register(
+    SRCS
+        "main.c"
+        "app/init/app_init.c"
+        "app/menu/app_menu.c"
+        "app/page/app_page.c"
+        "app/setting/app_setting.c"
+        "app/status_bar/app_status_bar.c"
+        "app/test/app_test.c"
+        "app/wifi/app_wifi.c"
+        "app/wifi/app_setting_wifi.c"
+        "app/wifi/app_wifi_setup.c"
+        "app/wifi/app_wifi_web.c"
+    INCLUDE_DIRS
+        "."
+        "app/init"
+        "app/menu"
+        "app/page"
+        "app/setting"
+        "app/status_bar"
+        "app/test"
+        "app/wifi"
+    REQUIRES
+        esp_wifi
+        esp_netif
+        esp_event
+        lvgl__lvgl
+    PRIV_REQUIRES
+        bsp
+        nvs_flash
+        esp_http_server
+        json
+)
